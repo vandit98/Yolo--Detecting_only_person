@@ -9,7 +9,6 @@ from tensorflow.keras.models import load_model
 loaded_model = load_model('emotion_model/')
 
 def emotion_predictor(crop_img):
-    return "happy"
     # Resize the image to the input size expected by the emotion model
     test_image = cv2.resize(crop_img, (227, 227))
     test_image = image.img_to_array(test_image)
